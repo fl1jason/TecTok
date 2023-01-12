@@ -17,6 +17,7 @@ const seedDatabase = async () => {
       ...project,
       user_id: users[Math.floor(Math.random() * users.length)].id,
     });
+    postMessage.push(newpost)
   }
 
   process.exit(0);
