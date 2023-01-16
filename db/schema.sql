@@ -1,2 +1,3 @@
 DROP DATABASE IF EXISTS tektok_db;
 CREATE DATABASE tektok_db;
+
