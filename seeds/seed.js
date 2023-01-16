@@ -12,7 +12,7 @@ const seedDatabase = async () => {
     returning: true,
   });
 
-  const postMessage = []
+  const postMessage = [] 
 
   for (const project of projectData) {
     const newpost = await Project.create({
@@ -26,3 +26,4 @@ const seedDatabase = async () => {
 };
 
 seedDatabase();
+  
