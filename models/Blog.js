@@ -22,7 +22,7 @@ Blog.init(
     },
 
     articleBody:{
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
       allowNull: false,
     },
     
