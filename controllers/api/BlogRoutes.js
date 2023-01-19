@@ -18,8 +18,10 @@ router.get('/:id',async (req, res) => {
   //get the blog by id and also include the comment
  try{
     const BlogData = await Blog.findByPk(req.params.id, {
+     
       include: [{model:Comment}],
  });
+ 
  if(!BlogData){
   res.status(404).json({message:'Post not found with the id'});
   return;

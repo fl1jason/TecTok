@@ -3,6 +3,6 @@ const userRoutes = require('./userRoutes');
 const BlogRoutes = require('./BlogRoutes');
 
 router.use('/users', userRoutes);
-router.use('/Blogs', BlogRoutes);
+router.use('/blog', BlogRoutes);
 
 module.exports = router;
