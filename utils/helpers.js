@@ -1,11 +1,16 @@
+const dayjs = require("dayjs");
 module.exports = {
   format_date: (date) => {
-    // Format date as MM/DD/YYYY
-    return date.toLocaleDateString();
+    // dayjs.extend()
+
+    // dayjs.updateLocale('en', {
+    //   relativeTime: {
+    //     dd: "%d days",
+    //     M: "a month",
+    //   }
+    // })
+    
+    // return date.toLocaleDateString(); 
+    return dayjs(date).format("DD/MM/YYYY HH:mm:ss")
   },
-  format_amount: (amount) => {
-    // format large numbers with commas
-    return parseInt(amount).toLocaleString();
-  },
-  
-};
+  };
