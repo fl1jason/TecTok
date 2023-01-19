@@ -53,6 +53,7 @@ router.put('/:id',async (req, res) => {
 });
 
 router.post('/', withAuth, async (req, res) => {
+  //Post the blog entered by the user
   try {
     const newBlog = await Blog.create({
       title: req.body.title,

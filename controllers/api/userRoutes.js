@@ -17,6 +17,7 @@ router.post('/', async (req, res) => {
 });
 
 router.post('/login', async (req, res) => {
+  //check the email the user has entered exists
   try {
     const userData = await User.findOne({ where: { email: req.body.email } });
 
@@ -26,6 +27,7 @@ router.post('/login', async (req, res) => {
         .json({ message: 'Incorrect email or password, please try again' });
       return;
     }
+    //check the corresponding password
 
     const validPassword = await userData.checkPassword(req.body.password);
 
@@ -35,6 +37,7 @@ router.post('/login', async (req, res) => {
         .json({ message: 'Incorrect email or password, please try again' });
       return;
     }
+    //creates a user session
 
     req.session.save(() => {
       req.session.user_id = userData.id;
