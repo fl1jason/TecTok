@@ -2,7 +2,7 @@
 ## Description
 TecTok is a blog site where users can read and post blogs about new developments in the tech world.
 
-For this project, we have worked as a group to build a full-stack app using Node.js, Express.js, Sequelize, Handlebars.js, and MVC architecture.
+For this project, we collaborated as a group to build a full-stack app using Node.js, Express.js, Sequelize, Handlebars.js, and MVC architecture.
 
 ## User Story
 
