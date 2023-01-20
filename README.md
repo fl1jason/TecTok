@@ -48,6 +48,9 @@ For this project, we have worked as a group to build a full-stack app using Node
 ## Deployment
 The blog site is deployed on Heroku via the URL ..................
 
+## Contributors
+Seema Bibi, Winnie Thomas, Adiba Sajid, Oskar Zaorski, Keesha Murray.
+
 
 
 
