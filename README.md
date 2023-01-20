@@ -1,6 +1,6 @@
 # TecTok
 ## Description
-TecTok is a blog site where users can read and post blogs about new developments in the tech world.
+TecTok is a blog site where users can read and post concise blogs about new developments in the tech world.
 
 For this project, we collaborated as a group to build a full-stack app using Node.js, Express.js, Sequelize, Handlebars.js, and MVC architecture.
 
@@ -53,7 +53,7 @@ Seema Bibi, Winnie Thomas, Adiba Sajid, Oskar Zaorski, Keesha Murray.
 
 
 
-
+# License
 MIT License
 
 Copyright (c) 2023 Keesha Murray
