@@ -1,35 +1,36 @@
 <div class="row">
   <div class="col-auto">
-    <h2>Welcome to your dashboard, {{name}}!</h2>
+    <h2> Hey {{name}}!</h2>
   </div>
 </div>
 
 <div class="row mt-4">
-  <div class="col-md-6">
-    <h3>Create a new blog post:</h3>
+  <div class="new-post">
+    <h3>Make a new post</h3>
 
     <form class="form new-blog-form">
       <div class="form-group">
-        <label for="blog-name"> User </label>
+        <label for="blog-name"> Title: </label>
         <input class="form-input" type="text" id="blog-name" name="blog-name" />
       </div>
       <div class="form-group">
-        <label for="blog-desc">Blog description:</label>
+        <label for="blog-desc">Subheading:</label>
         <textarea class="form-input" id="blog-desc" name="blog-desc"></textarea>
       </div>
       <div class= "form-group">
-        <label for="article-body">Article Body</label>
-        <textarea class="articlebody" id="article-body" name="article-body"></textarea>
+        <label for="article-body">Description:</label>
+        <textarea class="form-input" id="article-body" name="article-body"></textarea>
       </div>
       <div class="form-group">
-        <button type="submit" class="btn btn-primary">Upload Post</button>
+        <button type="submit" class="btn btn-primary">Post</button>
       </div>
+      
     </form>
   </div>
 
   {{#if Blogs.length}}
   <div class="col-md-6 blog-list">
-    <h3>Users Posts</h3>
+    <h3> Posts</h3>
 
     {{#each Blogs as |Blog|}}
     <div class="row mb-2">
