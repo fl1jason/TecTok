@@ -5,23 +5,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TekTok</title>
-  <link rel="stylesheet" href="/css/jass.css">
-  <link rel="stylesheet" href="/css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100;200;300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/jass.css">
+  <link rel="stylesheet" href="/css/style.css">
+  
+ 
 </head>
 
 <body>
   <div class="flex-column justify-space-around">
     <header class="display-flex justify-space-between align-center p-2">
-      <h1>TekTok</h1>
+      <h1><img src="/images/TekTok.jpg"></h1>
+    
       <nav>
         <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
-        <a href= "/">Homepage| </a>
-        <a href="/dashboard">Profile Dashboard|</a> 
-        <button class="no-button" id="logout">Logout</button>
+        <a href= "/" class="links">Homepage</a>
+        <a href="/dashboard" class="links">Posts</a> 
+        <button class="no-button" id="logout" class="links">Logout</button>
         {{else}}
         <a href="/login">Login</a>
         {{/if}}
