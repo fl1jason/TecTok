@@ -28,17 +28,17 @@
     </form>
   </div>
 
-  {{#if Blogs.length}}
+  {{#if blogs.length}}
   <div class="col-md-6 blog-list">
     <h3> Posts</h3>
 
-    {{#each Blogs as |Blog|}}
+    {{#each blogs as |blog|}}
     <div class="row mb-2">
       <div class="col-md-8">
-        <h4><a href="/blog/{{Blog.id}}">{{Blog.title}}</a></h4>
+        <h4><a href="/blog/{{blog.id}}">{{blog.title}}</a></h4>
       </div>
       <div class="col-md-4">
-        <button class="delete-button" data-id="{{Blog.id}}">Delete Post</button>
+        <button class="delete-button" data-id="{{blog.id}}">Delete Post</button>
       </div>
     </div>
     {{/each}}
