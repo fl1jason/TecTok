@@ -45,6 +45,12 @@ For this project, we collaborated as a group to build a full-stack app using Nod
 
 * The views are rendered with Handlebars.js templates.
 
+<img width="1440" alt="Screenshot 2023-01-24 4" src="https://user-images.githubusercontent.com/113778804/215885799-214766d9-147b-43a5-a03f-ce8e0c710418.png">
+<img width="1440" alt="Screenshot 2023-01-24  3 (1)" src="https://user-images.githubusercontent.com/113778804/215885960-0b012823-e083-42ff-b29b-6dadc28a3f48.png">
+<img width="1440" alt="TekTok screenshot2" src="https://user-images.githubusercontent.com/113778804/215886122-875a6708-c67d-48be-9226-c0527e50dca8.png">
+<img width="1440" alt="TekTok screenshot1" src="https://user-images.githubusercontent.com/113778804/215886221-2d285fbc-203d-4f63-98ab-84d601f0420a.png">
+
+
 ## Deployment
 The blog site is deployed on Heroku via the URL ..................
 
