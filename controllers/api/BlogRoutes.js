@@ -1,51 +1,52 @@
 const router = require('express').Router();
-const { Blog,Comment } = require('../../models');
+const { Blog, Comment } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-router.get('/',async (req, res) => {
+// Made a change here to get all the blogs and also include the comment
+router.get('/', async (req, res) => {
   //get all the blogs and also include the comment
-  try{
+  try {
     const BlogData = await Blog.findAll({
-      include: [{model:Comment}],
-  });
-  res.status(200).json(BlogData);
-}catch(err){
-  res.status(500).json(err);
-}
+      include: [{ model: Comment }],
+    });
+    res.status(200).json(BlogData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
 
-router.get('/:id',async (req, res) => {
+router.get('/:id', async (req, res) => {
   //get the blog by id and also include the comment
- try{
+  try {
     const BlogData = await Blog.findByPk(req.params.id, {
-     
-      include: [{model:Comment}],
- });
- 
- if(!BlogData){
-  res.status(404).json({message:'Post not found with the id'});
-  return;
- }
- res.status(200).json(BlogData);
-} catch (err) {
-  res.status(500).json(err);
-}
+
+      include: [{ model: Comment }],
+    });
+
+    if (!BlogData) {
+      res.status(404).json({ message: 'Post not found with the id' });
+      return;
+    }
+    res.status(200).json(BlogData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
 
-router.put('/:id',async (req, res) => {
+router.put('/:id', async (req, res) => {
   //update the blog by id 
   const newData = {
     title: req.body.title,
-    description:req.body.description,
+    description: req.body.description,
     articleBody: req.body.articleBody,
   }
-   try {
+  try {
     const BlogData = await Blog.update(newData, {
       where: {
         id: req.params.id,
       },
     });
-    
+
     res.status(200).json(BlogData);
   } catch (err) {
     res.status(500).json(err);
@@ -58,7 +59,7 @@ router.post('/', withAuth, async (req, res) => {
     const newBlog = await Blog.create({
       title: req.body.title,
       description: req.body.description,
-      articleBody:req.body.articleBody,  
+      articleBody: req.body.articleBody,
       user_id: req.session.user_id,
     });
 
